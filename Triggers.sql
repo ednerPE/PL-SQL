@@ -1,0 +1,10 @@
+--DML INSERT,UPDATE,DELETE 
+CREATE OR REPLACE TRIGGER iss_empl AFTER
+    INSERT ON regions
+BEGIN
+    INSERT INTO log_table VALUES (
+        'INSERCION EN LA TALBA REGIONES',
+        user
+    );
+
+END;
